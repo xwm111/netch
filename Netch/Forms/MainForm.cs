@@ -1439,44 +1439,66 @@ public partial class MainForm : Form
         switch (cbx.Items[e.Index])
         {
             case Server item:
-            {
-                // 计算延迟底色
-                var numBoxBackBrush = item.Delay switch { > 200 => Brushes.Red, > 80 => Brushes.Yellow, >= 0 => _greenBrush, _ => Brushes.Gray };
+                {
+                    // 计算延迟底色
+                    var numBoxBackBrush = item.Delay switch { > 200 => Brushes.Red, > 80 => Brushes.Yellow, >= 0 => _greenBrush, _ => Brushes.Gray };
 
-                // 绘制延迟底色
-                e.Graphics.FillRectangle(numBoxBackBrush, _numberBoxX, e.Bounds.Y, _numberBoxWidth, e.Bounds.Height);
+                    // 绘制延迟底色
+                    e.Graphics.FillRectangle(numBoxBackBrush, _numberBoxX, e.Bounds.Y, _numberBoxWidth, e.Bounds.Height);
 
-                // 绘制延迟字符串
-                TextRenderer.DrawText(e.Graphics,
-                    item.Delay.ToString(),
-                    cbx.Font,
-                    new Point(_numberBoxX + _numberBoxWrap, e.Bounds.Y),
-                    Color.Black,
-                    TextFormatFlags.Left);
+                    // 绘制延迟字符串
+                    TextRenderer.DrawText(e.Graphics,
+                        item.Delay.ToString(),
+                        cbx.Font,
+                        new Point(_numberBoxX + _numberBoxWrap, e.Bounds.Y),
+                        Color.Black,
+                        TextFormatFlags.Left);
 
-                break;
-            }
+                    break;
+                }
             case Mode item:
-            {
-                /*
-                // 绘制 模式Box 底色
-                e.Graphics.FillRectangle(Brushes.Gray, _numberBoxX, e.Bounds.Y, _numberBoxWidth, e.Bounds.Height);
+                {
+                    /*
+                    // 绘制 模式Box 底色
+                    e.Graphics.FillRectangle(Brushes.Gray, _numberBoxX, e.Bounds.Y, _numberBoxWidth, e.Bounds.Height);
 
-                // 绘制 模式行数 字符串
-                TextRenderer.DrawText(e.Graphics,
-                    item.Content.Count.ToString(),
-                    cbx.Font,
-                    new Point(_numberBoxX + _numberBoxWrap, e.Bounds.Y),
-                    Color.Black,
-                    TextFormatFlags.Left);
-                    */
+                    // 绘制 模式行数 字符串
+                    TextRenderer.DrawText(e.Graphics,
+                        item.Content.Count.ToString(),
+                        cbx.Font,
+                        new Point(_numberBoxX + _numberBoxWrap, e.Bounds.Y),
+                        Color.Black,
+                        TextFormatFlags.Left);
+                        */
 
-                break;
-            }
+                    break;
+                }
         }
     }
 
     #endregion
 
     #endregion
+
+    private void accountToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        Log.Information("refresh server clicked");
+    }
+
+    private void toolStripMenuItem2_Click(object sender, EventArgs e)
+    {
+        //loginform login = new loginform(this);
+        //login.show();
+        //this.hide();
+
+        Hide();
+        //new AboutForm().ShowDialog();
+        new loginForm().ShowDialog();
+        Show();
+    }
 }
