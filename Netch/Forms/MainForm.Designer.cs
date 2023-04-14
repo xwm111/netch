@@ -117,7 +117,7 @@
             MenuStrip.Location = new Point(0, 0);
             MenuStrip.Name = "MenuStrip";
             MenuStrip.RenderMode = ToolStripRenderMode.Professional;
-            MenuStrip.Size = new Size(928, 26);
+            MenuStrip.Size = new Size(928, 33);
             MenuStrip.TabIndex = 0;
             // 
             // ServerToolStripMenuItem
@@ -125,13 +125,13 @@
             ServerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ImportServersFromClipboardToolStripMenuItem });
             ServerToolStripMenuItem.Margin = new Padding(3, 0, 0, 1);
             ServerToolStripMenuItem.Name = "ServerToolStripMenuItem";
-            ServerToolStripMenuItem.Size = new Size(57, 21);
+            ServerToolStripMenuItem.Size = new Size(79, 28);
             ServerToolStripMenuItem.Text = "Server";
             // 
             // ImportServersFromClipboardToolStripMenuItem
             // 
             ImportServersFromClipboardToolStripMenuItem.Name = "ImportServersFromClipboardToolStripMenuItem";
-            ImportServersFromClipboardToolStripMenuItem.Size = new Size(259, 22);
+            ImportServersFromClipboardToolStripMenuItem.Size = new Size(376, 34);
             ImportServersFromClipboardToolStripMenuItem.Text = "Import Servers From Clipboard";
             ImportServersFromClipboardToolStripMenuItem.Click += ImportServersFromClipboardToolStripMenuItem_Click;
             // 
@@ -140,27 +140,27 @@
             ModeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CreateProcessModeToolStripMenuItem, CreateRouteTableRuleToolStripMenuItem, ReloadModesToolStripMenuItem });
             ModeToolStripMenuItem.Margin = new Padding(0, 0, 0, 1);
             ModeToolStripMenuItem.Name = "ModeToolStripMenuItem";
-            ModeToolStripMenuItem.Size = new Size(55, 21);
+            ModeToolStripMenuItem.Size = new Size(77, 28);
             ModeToolStripMenuItem.Text = "Mode";
             // 
             // CreateProcessModeToolStripMenuItem
             // 
             CreateProcessModeToolStripMenuItem.Name = "CreateProcessModeToolStripMenuItem";
-            CreateProcessModeToolStripMenuItem.Size = new Size(217, 22);
+            CreateProcessModeToolStripMenuItem.Size = new Size(317, 34);
             CreateProcessModeToolStripMenuItem.Text = "Create Process Mode";
             CreateProcessModeToolStripMenuItem.Click += CreateProcessModeToolStripButton_Click;
             // 
             // CreateRouteTableRuleToolStripMenuItem
             // 
             CreateRouteTableRuleToolStripMenuItem.Name = "CreateRouteTableRuleToolStripMenuItem";
-            CreateRouteTableRuleToolStripMenuItem.Size = new Size(217, 22);
+            CreateRouteTableRuleToolStripMenuItem.Size = new Size(317, 34);
             CreateRouteTableRuleToolStripMenuItem.Text = "Create Route Table Rule";
             CreateRouteTableRuleToolStripMenuItem.Click += createRouteTableModeToolStripMenuItem_Click;
             // 
             // ReloadModesToolStripMenuItem
             // 
             ReloadModesToolStripMenuItem.Name = "ReloadModesToolStripMenuItem";
-            ReloadModesToolStripMenuItem.Size = new Size(217, 22);
+            ReloadModesToolStripMenuItem.Size = new Size(317, 34);
             ReloadModesToolStripMenuItem.Text = "Reload Modes";
             ReloadModesToolStripMenuItem.Click += ReloadModesToolStripMenuItem_Click;
             // 
@@ -169,20 +169,20 @@
             SubscriptionToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ManageSubscriptionsToolStripMenuItem, UpdateServersToolStripMenuItem });
             SubscriptionToolStripMenuItem.Margin = new Padding(0, 0, 0, 1);
             SubscriptionToolStripMenuItem.Name = "SubscriptionToolStripMenuItem";
-            SubscriptionToolStripMenuItem.Size = new Size(92, 21);
+            SubscriptionToolStripMenuItem.Size = new Size(134, 28);
             SubscriptionToolStripMenuItem.Text = "Subscription";
             // 
             // ManageSubscriptionsToolStripMenuItem
             // 
             ManageSubscriptionsToolStripMenuItem.Name = "ManageSubscriptionsToolStripMenuItem";
-            ManageSubscriptionsToolStripMenuItem.Size = new Size(206, 22);
+            ManageSubscriptionsToolStripMenuItem.Size = new Size(302, 34);
             ManageSubscriptionsToolStripMenuItem.Text = "Manage Subscriptions";
             ManageSubscriptionsToolStripMenuItem.Click += ManageSubscriptionLinksToolStripMenuItem_Click;
             // 
             // UpdateServersToolStripMenuItem
             // 
             UpdateServersToolStripMenuItem.Name = "UpdateServersToolStripMenuItem";
-            UpdateServersToolStripMenuItem.Size = new Size(206, 22);
+            UpdateServersToolStripMenuItem.Size = new Size(302, 34);
             UpdateServersToolStripMenuItem.Text = "Update Servers";
             UpdateServersToolStripMenuItem.Click += UpdateServersFromSubscriptionLinksToolStripMenuItem_Click;
             // 
@@ -191,41 +191,41 @@
             OptionsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { OpenDirectoryToolStripMenuItem, ShowHideConsoleToolStripMenuItem, CleanDNSCacheToolStripMenuItem, UninstallServiceToolStripMenuItem, RemoveNetchFirewallRulesToolStripMenuItem });
             OptionsToolStripMenuItem.Margin = new Padding(0, 0, 0, 1);
             OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem";
-            OptionsToolStripMenuItem.Size = new Size(66, 21);
+            OptionsToolStripMenuItem.Size = new Size(95, 28);
             OptionsToolStripMenuItem.Text = "Options";
             // 
             // OpenDirectoryToolStripMenuItem
             // 
             OpenDirectoryToolStripMenuItem.Name = "OpenDirectoryToolStripMenuItem";
-            OpenDirectoryToolStripMenuItem.Size = new Size(243, 22);
+            OpenDirectoryToolStripMenuItem.Size = new Size(358, 34);
             OpenDirectoryToolStripMenuItem.Text = "Open Directory";
             OpenDirectoryToolStripMenuItem.Click += OpenDirectoryToolStripMenuItem_Click;
             // 
             // ShowHideConsoleToolStripMenuItem
             // 
             ShowHideConsoleToolStripMenuItem.Name = "ShowHideConsoleToolStripMenuItem";
-            ShowHideConsoleToolStripMenuItem.Size = new Size(243, 22);
+            ShowHideConsoleToolStripMenuItem.Size = new Size(358, 34);
             ShowHideConsoleToolStripMenuItem.Text = "Show/Hide Console";
             ShowHideConsoleToolStripMenuItem.Click += ShowHideConsoleToolStripMenuItem_Click;
             // 
             // CleanDNSCacheToolStripMenuItem
             // 
             CleanDNSCacheToolStripMenuItem.Name = "CleanDNSCacheToolStripMenuItem";
-            CleanDNSCacheToolStripMenuItem.Size = new Size(243, 22);
+            CleanDNSCacheToolStripMenuItem.Size = new Size(358, 34);
             CleanDNSCacheToolStripMenuItem.Text = "Clean DNS Cache";
             CleanDNSCacheToolStripMenuItem.Click += CleanDNSCacheToolStripMenuItem_Click;
             // 
             // UninstallServiceToolStripMenuItem
             // 
             UninstallServiceToolStripMenuItem.Name = "UninstallServiceToolStripMenuItem";
-            UninstallServiceToolStripMenuItem.Size = new Size(243, 22);
+            UninstallServiceToolStripMenuItem.Size = new Size(358, 34);
             UninstallServiceToolStripMenuItem.Text = "Uninstall NF Service";
             UninstallServiceToolStripMenuItem.Click += UninstallServiceToolStripMenuItem_Click;
             // 
             // RemoveNetchFirewallRulesToolStripMenuItem
             // 
             RemoveNetchFirewallRulesToolStripMenuItem.Name = "RemoveNetchFirewallRulesToolStripMenuItem";
-            RemoveNetchFirewallRulesToolStripMenuItem.Size = new Size(243, 22);
+            RemoveNetchFirewallRulesToolStripMenuItem.Size = new Size(358, 34);
             RemoveNetchFirewallRulesToolStripMenuItem.Text = "Remove Netch Firewall Rules";
             RemoveNetchFirewallRulesToolStripMenuItem.Click += RemoveNetchFirewallRulesToolStripMenuItem_Click;
             // 
@@ -234,27 +234,27 @@
             HelpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CheckForUpdateToolStripMenuItem, FAQToolStripMenuItem });
             HelpToolStripMenuItem.Margin = new Padding(0, 0, 0, 1);
             HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            HelpToolStripMenuItem.Size = new Size(47, 21);
+            HelpToolStripMenuItem.Size = new Size(67, 28);
             HelpToolStripMenuItem.Text = "Help";
             // 
             // CheckForUpdateToolStripMenuItem
             // 
             CheckForUpdateToolStripMenuItem.Name = "CheckForUpdateToolStripMenuItem";
-            CheckForUpdateToolStripMenuItem.Size = new Size(177, 22);
+            CheckForUpdateToolStripMenuItem.Size = new Size(258, 34);
             CheckForUpdateToolStripMenuItem.Text = "Check for update";
             CheckForUpdateToolStripMenuItem.Click += CheckForUpdatesToolStripMenuItem_Click;
             // 
             // FAQToolStripMenuItem
             // 
             FAQToolStripMenuItem.Name = "FAQToolStripMenuItem";
-            FAQToolStripMenuItem.Size = new Size(177, 22);
+            FAQToolStripMenuItem.Size = new Size(258, 34);
             FAQToolStripMenuItem.Text = "FAQ";
             FAQToolStripMenuItem.Click += fAQToolStripMenuItem_Click;
             // 
             // ForceExitToolStripMenuItem
             // 
             ForceExitToolStripMenuItem.Name = "ForceExitToolStripMenuItem";
-            ForceExitToolStripMenuItem.Size = new Size(40, 22);
+            ForceExitToolStripMenuItem.Size = new Size(57, 29);
             ForceExitToolStripMenuItem.Text = "Exit";
             ForceExitToolStripMenuItem.Click += ForceExitToolStripMenuItem_Click;
             // 
@@ -264,7 +264,7 @@
             AboutToolStripButton.AutoToolTip = false;
             AboutToolStripButton.Margin = new Padding(0, 0, 3, 1);
             AboutToolStripButton.Name = "AboutToolStripButton";
-            AboutToolStripButton.Size = new Size(47, 21);
+            AboutToolStripButton.Size = new Size(68, 28);
             AboutToolStripButton.Text = "About";
             AboutToolStripButton.Click += AboutToolStripButton_Click;
             // 
@@ -277,7 +277,7 @@
             NewVersionLabel.LinkBehavior = LinkBehavior.NeverUnderline;
             NewVersionLabel.LinkColor = Color.Red;
             NewVersionLabel.Name = "NewVersionLabel";
-            NewVersionLabel.Size = new Size(135, 19);
+            NewVersionLabel.Size = new Size(196, 24);
             NewVersionLabel.Text = "New version available";
             NewVersionLabel.Visible = false;
             NewVersionLabel.Click += NewVersionLabel_Click;
@@ -290,7 +290,7 @@
             VersionLabel.IsLink = true;
             VersionLabel.LinkBehavior = LinkBehavior.NeverUnderline;
             VersionLabel.Name = "VersionLabel";
-            VersionLabel.Size = new Size(26, 19);
+            VersionLabel.Size = new Size(37, 24);
             VersionLabel.Text = "xxx";
             VersionLabel.Click += VersionLabel_Click;
             // 
@@ -298,26 +298,26 @@
             // 
             accountToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, logoutToolStripMenuItem1, refreshToolStripMenuItem1 });
             accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            accountToolStripMenuItem1.Size = new Size(66, 22);
+            accountToolStripMenuItem1.Size = new Size(97, 29);
             accountToolStripMenuItem1.Text = "Account";
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(117, 22);
+            toolStripMenuItem2.Size = new Size(169, 34);
             toolStripMenuItem2.Text = "login";
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // logoutToolStripMenuItem1
             // 
             logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            logoutToolStripMenuItem1.Size = new Size(117, 22);
+            logoutToolStripMenuItem1.Size = new Size(169, 34);
             logoutToolStripMenuItem1.Text = "logout";
             // 
             // refreshToolStripMenuItem1
             // 
             refreshToolStripMenuItem1.Name = "refreshToolStripMenuItem1";
-            refreshToolStripMenuItem1.Size = new Size(117, 22);
+            refreshToolStripMenuItem1.Size = new Size(169, 34);
             refreshToolStripMenuItem1.Text = "refresh";
             // 
             // ConfigurationGroupBox
@@ -347,22 +347,22 @@
             configLayoutPanel.Controls.Add(tableLayoutPanel2, 2, 0);
             configLayoutPanel.Controls.Add(tableLayoutPanel3, 2, 1);
             configLayoutPanel.Dock = DockStyle.Fill;
-            configLayoutPanel.Location = new Point(3, 19);
+            configLayoutPanel.Location = new Point(3, 27);
             configLayoutPanel.Name = "configLayoutPanel";
             configLayoutPanel.RowCount = 3;
             configLayoutPanel.RowStyles.Add(new RowStyle());
             configLayoutPanel.RowStyles.Add(new RowStyle());
             configLayoutPanel.RowStyles.Add(new RowStyle());
-            configLayoutPanel.Size = new Size(703, 93);
+            configLayoutPanel.Size = new Size(703, 85);
             configLayoutPanel.TabIndex = 15;
             // 
             // ProfileLabel
             // 
             ProfileLabel.Anchor = AnchorStyles.Left;
             ProfileLabel.AutoSize = true;
-            ProfileLabel.Location = new Point(3, 68);
+            ProfileLabel.Location = new Point(3, 80);
             ProfileLabel.Name = "ProfileLabel";
-            ProfileLabel.Size = new Size(45, 17);
+            ProfileLabel.Size = new Size(65, 24);
             ProfileLabel.TabIndex = 10;
             ProfileLabel.Text = "Profile";
             // 
@@ -370,9 +370,9 @@
             // 
             ModeLabel.Anchor = AnchorStyles.Left;
             ModeLabel.AutoSize = true;
-            ModeLabel.Location = new Point(3, 36);
+            ModeLabel.Location = new Point(3, 43);
             ModeLabel.Name = "ModeLabel";
-            ModeLabel.Size = new Size(43, 17);
+            ModeLabel.Size = new Size(61, 24);
             ModeLabel.TabIndex = 3;
             ModeLabel.Text = "Mode";
             // 
@@ -382,16 +382,16 @@
             ServerLabel.AutoSize = true;
             ServerLabel.Location = new Point(3, 6);
             ServerLabel.Name = "ServerLabel";
-            ServerLabel.Size = new Size(45, 17);
+            ServerLabel.Size = new Size(63, 24);
             ServerLabel.TabIndex = 0;
             ServerLabel.Text = "Server";
             // 
             // ProfileNameText
             // 
             ProfileNameText.Dock = DockStyle.Fill;
-            ProfileNameText.Location = new Point(54, 63);
+            ProfileNameText.Location = new Point(74, 77);
             ProfileNameText.Name = "ProfileNameText";
-            ProfileNameText.Size = new Size(546, 23);
+            ProfileNameText.Size = new Size(546, 31);
             ProfileNameText.TabIndex = 11;
             // 
             // ModeComboBox
@@ -401,9 +401,9 @@
             ModeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             ModeComboBox.FormattingEnabled = true;
             ModeComboBox.IntegralHeight = false;
-            ModeComboBox.Location = new Point(54, 33);
+            ModeComboBox.Location = new Point(74, 40);
             ModeComboBox.Name = "ModeComboBox";
-            ModeComboBox.Size = new Size(546, 24);
+            ModeComboBox.Size = new Size(546, 32);
             ModeComboBox.TabIndex = 2;
             ModeComboBox.DrawItem += ComboBox_DrawItem;
             ModeComboBox.SelectionChangeCommitted += ModeComboBox_SelectionChangeCommitted;
@@ -415,10 +415,10 @@
             ServerComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             ServerComboBox.FormattingEnabled = true;
             ServerComboBox.IntegralHeight = false;
-            ServerComboBox.Location = new Point(54, 3);
+            ServerComboBox.Location = new Point(74, 3);
             ServerComboBox.MaxDropDownItems = 16;
             ServerComboBox.Name = "ServerComboBox";
-            ServerComboBox.Size = new Size(546, 24);
+            ServerComboBox.Size = new Size(546, 32);
             ServerComboBox.TabIndex = 1;
             ServerComboBox.DrawItem += ComboBox_DrawItem;
             ServerComboBox.SelectionChangeCommitted += ServerComboBox_SelectionChangeCommitted;
@@ -434,7 +434,7 @@
             tableLayoutPanel2.Controls.Add(CopyLinkPictureBox, 3, 0);
             tableLayoutPanel2.Controls.Add(DeleteServerPictureBox, 1, 0);
             tableLayoutPanel2.Controls.Add(SpeedPictureBox, 2, 0);
-            tableLayoutPanel2.Location = new Point(606, 3);
+            tableLayoutPanel2.Location = new Point(626, 3);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -499,7 +499,7 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel3.Controls.Add(EditModePictureBox, 0, 0);
             tableLayoutPanel3.Controls.Add(DeleteModePictureBox, 1, 0);
-            tableLayoutPanel3.Location = new Point(606, 33);
+            tableLayoutPanel3.Location = new Point(626, 40);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -534,9 +534,9 @@
             // 
             StatusStrip.ImageScalingSize = new Size(20, 20);
             StatusStrip.Items.AddRange(new ToolStripItem[] { StatusLabel, UsedBandwidthLabel, DownloadSpeedLabel, UploadSpeedLabel, blankToolStripStatusLabel, HttpStatusLabel, NatTypeStatusLabel, NatTypeStatusLightLabel });
-            StatusStrip.Location = new Point(0, 357);
+            StatusStrip.Location = new Point(0, 348);
             StatusStrip.Name = "StatusStrip";
-            StatusStrip.Size = new Size(928, 22);
+            StatusStrip.Size = new Size(928, 31);
             StatusStrip.SizingGrip = false;
             StatusStrip.TabIndex = 2;
             // 
@@ -544,40 +544,40 @@
             // 
             StatusLabel.BackColor = Color.Transparent;
             StatusLabel.Name = "StatusLabel";
-            StatusLabel.Size = new Size(177, 17);
+            StatusLabel.Size = new Size(261, 24);
             StatusLabel.Text = "Status: Waiting for command";
             // 
             // UsedBandwidthLabel
             // 
             UsedBandwidthLabel.Name = "UsedBandwidthLabel";
-            UsedBandwidthLabel.Size = new Size(72, 17);
+            UsedBandwidthLabel.Size = new Size(100, 24);
             UsedBandwidthLabel.Text = "Used: 0 KB";
             UsedBandwidthLabel.Visible = false;
             // 
             // DownloadSpeedLabel
             // 
             DownloadSpeedLabel.Name = "DownloadSpeedLabel";
-            DownloadSpeedLabel.Size = new Size(59, 17);
+            DownloadSpeedLabel.Size = new Size(82, 24);
             DownloadSpeedLabel.Text = "↓: 0 KB/s";
             DownloadSpeedLabel.Visible = false;
             // 
             // UploadSpeedLabel
             // 
             UploadSpeedLabel.Name = "UploadSpeedLabel";
-            UploadSpeedLabel.Size = new Size(59, 17);
+            UploadSpeedLabel.Size = new Size(82, 24);
             UploadSpeedLabel.Text = "↑: 0 KB/s";
             UploadSpeedLabel.Visible = false;
             // 
             // blankToolStripStatusLabel
             // 
             blankToolStripStatusLabel.Name = "blankToolStripStatusLabel";
-            blankToolStripStatusLabel.Size = new Size(682, 17);
+            blankToolStripStatusLabel.Size = new Size(578, 24);
             blankToolStripStatusLabel.Spring = true;
             // 
             // HttpStatusLabel
             // 
             HttpStatusLabel.Name = "HttpStatusLabel";
-            HttpStatusLabel.Size = new Size(41, 17);
+            HttpStatusLabel.Size = new Size(59, 24);
             HttpStatusLabel.Text = "HTTP:";
             HttpStatusLabel.TextAlign = ContentAlignment.BottomLeft;
             HttpStatusLabel.Visible = false;
@@ -586,7 +586,7 @@
             // NatTypeStatusLabel
             // 
             NatTypeStatusLabel.Name = "NatTypeStatusLabel";
-            NatTypeStatusLabel.Size = new Size(36, 17);
+            NatTypeStatusLabel.Size = new Size(52, 24);
             NatTypeStatusLabel.Text = "NAT:";
             NatTypeStatusLabel.TextAlign = ContentAlignment.BottomLeft;
             NatTypeStatusLabel.Click += NatTypeStatusLabel_Click;
@@ -598,7 +598,7 @@
             NatTypeStatusLightLabel.ForeColor = Color.Red;
             NatTypeStatusLightLabel.Margin = new Padding(0, 0, 0, 1);
             NatTypeStatusLightLabel.Name = "NatTypeStatusLightLabel";
-            NatTypeStatusLightLabel.Size = new Size(18, 21);
+            NatTypeStatusLightLabel.Size = new Size(22, 30);
             NatTypeStatusLightLabel.Text = "⬤";
             NatTypeStatusLightLabel.TextAlign = ContentAlignment.BottomCenter;
             NatTypeStatusLightLabel.Click += NatTypeStatusLabel_Click;
@@ -627,19 +627,19 @@
             NotifyMenu.Items.AddRange(new ToolStripItem[] { ShowMainFormToolStripButton, ExitToolStripButton });
             NotifyMenu.Name = "NotifyMenu";
             NotifyMenu.ShowItemToolTips = false;
-            NotifyMenu.Size = new Size(108, 48);
+            NotifyMenu.Size = new Size(127, 64);
             // 
             // ShowMainFormToolStripButton
             // 
             ShowMainFormToolStripButton.Name = "ShowMainFormToolStripButton";
-            ShowMainFormToolStripButton.Size = new Size(107, 22);
+            ShowMainFormToolStripButton.Size = new Size(126, 30);
             ShowMainFormToolStripButton.Text = "Show";
             ShowMainFormToolStripButton.Click += ShowMainFormToolStripButton_Click;
             // 
             // ExitToolStripButton
             // 
             ExitToolStripButton.Name = "ExitToolStripButton";
-            ExitToolStripButton.Size = new Size(107, 22);
+            ExitToolStripButton.Size = new Size(126, 30);
             ExitToolStripButton.Text = "Exit";
             ExitToolStripButton.Click += ExitToolStripButton_Click;
             // 
@@ -672,12 +672,12 @@
             ProfileTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             ProfileTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             ProfileTable.Dock = DockStyle.Fill;
-            ProfileTable.Location = new Point(3, 19);
+            ProfileTable.Location = new Point(3, 27);
             ProfileTable.Name = "ProfileTable";
             ProfileTable.RowCount = 1;
             ProfileTable.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             ProfileTable.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            ProfileTable.Size = new Size(703, 43);
+            ProfileTable.Size = new Size(703, 35);
             ProfileTable.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -706,7 +706,7 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleDimensions = new SizeF(144F, 144F);
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;

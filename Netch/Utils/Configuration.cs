@@ -1,8 +1,13 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.VisualStudio.Threading;
 using Netch.JsonConverter;
 using Netch.Models;
+using Netch.Servers;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Netch.Utils;
 
@@ -127,6 +132,91 @@ public static class Configuration
         if (!File.Exists(FileFullName))
         {
             await using var fs = new FileStream(FileFullName, FileMode.Create, FileAccess.ReadWrite, FileShare.None, 4096, true);
+        }
+    }
+
+    public static async Task UpdateServerList(JToken? servers)
+    {
+        try
+        {
+            if (!File.Exists(FileFullName))
+            {
+                await SaveAsync();
+                return;
+            }
+
+            await using var _ = await _lock.ReadLockAsync();
+
+            if (await LoadCoreAsync(FileFullName,servers))
+                return;
+
+            Log.Information("Load backup configuration \"{FileName}\"", BackupFileFullName);
+            await LoadCoreAsync(BackupFileFullName, servers);
+        }
+        catch (Exception e)
+        {
+            Log.Error(e, "Load configuration failed");
+            Environment.Exit(-1);
+        }
+    }
+
+    private static async ValueTask<bool> LoadCoreAsync(string filename, JToken? servers)
+    {
+        try
+        {
+            Setting settings;
+
+            await using (var fs = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, true))
+            {
+                settings = (await JsonSerializer.DeserializeAsync<Setting>(fs, JsonSerializerOptions))!;
+            }
+
+            CheckSetting(settings);
+            settings.Server = new List<Server>();
+            //将登录获取到的server更新到本地
+            JArray jArray = (JArray)servers;
+            foreach (JToken element in jArray)
+            {
+                
+                JObject jObject = (JObject)element;
+                JToken typeValue = jObject["Type"];
+                if (typeValue.ToString() == "VMess")
+                {
+                    
+                    VMessServer server = JsonConvert.DeserializeObject<VMessServer>(jObject.ToString());
+                    settings.Server.Add(server);
+                }
+                else if (typeValue.ToString() == "Vless")
+                {
+                    VLESSServer server = JsonConvert.DeserializeObject<VLESSServer>(jObject.ToString());
+                    settings.Server.Add(server);
+                }
+                else if (typeValue.ToString() == "SS")
+                {
+                    ShadowsocksServer server = JsonConvert.DeserializeObject<ShadowsocksServer>(jObject.ToString());
+                    settings.Server.Add(server);
+                }
+                else if (typeValue.ToString() == "SSR")
+                {
+                    ShadowsocksRServer server = JsonConvert.DeserializeObject<ShadowsocksRServer>(jObject.ToString());
+                    settings.Server.Add(server);
+                }
+                else if (typeValue.ToString() == "Trojan")
+                {
+                    TrojanServer server = JsonConvert.DeserializeObject<TrojanServer>(jObject.ToString());
+                    settings.Server.Add(server);
+                }
+
+            }
+
+
+            Global.Settings = settings;
+            return true;
+        }
+        catch (Exception e)
+        {
+            Log.Error(e, "Load configuration file \"{FileName}\" error ", filename);
+            return false;
         }
     }
 }

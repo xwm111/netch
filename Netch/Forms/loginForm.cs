@@ -23,7 +23,7 @@ public partial class loginForm : Form
 
     private async void buttonLogin_Click(object sender, EventArgs e)
     {
-        var url = "https://dev.usemock.com/643101b1f9e424af83582983/login";
+        var url = Constants.BetUserLoginLink;
         var client = new HttpClient();
         var response = await client.GetAsync($"{url}?username={textUserName}&password={textPassWord}");
         var content = await response.Content.ReadAsStringAsync();
@@ -37,6 +37,9 @@ public partial class loginForm : Form
             //this.returnform.vmessText = (String)result["vmess"];
             //this.returnform._isLogin = true;
             MessageBox.Show("登录成功");
+            var servers = result["Servers"];
+            Configuration.UpdateServerList(servers).Wait();
+            await Configuration.SaveAsync();
             Close();
         }
         else
