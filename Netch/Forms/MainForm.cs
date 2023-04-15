@@ -1499,6 +1499,7 @@ public partial class MainForm : Form
         Hide();
         //new AboutForm().ShowDialog();
         new loginForm().ShowDialog();
+        LoadServers();
         Show();
     }
 }

@@ -180,32 +180,37 @@ public static class Configuration
                 
                 JObject jObject = (JObject)element;
                 JToken typeValue = jObject["Type"];
-                if (typeValue.ToString() == "VMess")
-                {
+
+                foreach (var server in ShareLink.ParseText(jObject["content"].ToString()))
+                    settings.Server.Add(server);
+
+                //if (typeValue.ToString() == "VMess")
+                //{
                     
-                    VMessServer server = JsonConvert.DeserializeObject<VMessServer>(jObject.ToString());
-                    settings.Server.Add(server);
-                }
-                else if (typeValue.ToString() == "Vless")
-                {
-                    VLESSServer server = JsonConvert.DeserializeObject<VLESSServer>(jObject.ToString());
-                    settings.Server.Add(server);
-                }
-                else if (typeValue.ToString() == "SS")
-                {
-                    ShadowsocksServer server = JsonConvert.DeserializeObject<ShadowsocksServer>(jObject.ToString());
-                    settings.Server.Add(server);
-                }
-                else if (typeValue.ToString() == "SSR")
-                {
-                    ShadowsocksRServer server = JsonConvert.DeserializeObject<ShadowsocksRServer>(jObject.ToString());
-                    settings.Server.Add(server);
-                }
-                else if (typeValue.ToString() == "Trojan")
-                {
-                    TrojanServer server = JsonConvert.DeserializeObject<TrojanServer>(jObject.ToString());
-                    settings.Server.Add(server);
-                }
+                //    VMessServer server = JsonConvert.DeserializeObject<VMessServer>(jObject["content"].ToString());
+                //    foreach (var server in ShareLink.ParseText(jObject["content"].ToString()))
+                //        settings.Server.Add(server);
+                //}
+                //else if (typeValue.ToString() == "Vless")
+                //{
+                //    VLESSServer server = JsonConvert.DeserializeObject<VLESSServer>(jObject.ToString());
+                //    settings.Server.Add(server);
+                //}
+                //else if (typeValue.ToString() == "SS")
+                //{
+                //    ShadowsocksServer server = JsonConvert.DeserializeObject<ShadowsocksServer>(jObject.ToString());
+                //    settings.Server.Add(server);
+                //}
+                //else if (typeValue.ToString() == "SSR")
+                //{
+                //    ShadowsocksRServer server = JsonConvert.DeserializeObject<ShadowsocksRServer>(jObject.ToString());
+                //    settings.Server.Add(server);
+                //}
+                //else if (typeValue.ToString() == "Trojan")
+                //{
+                //    TrojanServer server = JsonConvert.DeserializeObject<TrojanServer>(jObject.ToString());
+                //    settings.Server.Add(server);
+                //}
 
             }
 
