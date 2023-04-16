@@ -873,7 +873,7 @@ public partial class MainForm : Form
                 ProfileTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1));
 
             configLayoutPanel.RowStyles[2].SizeType = SizeType.AutoSize;
-            ProfileGroupBox.Visible = true;
+            ProfileGroupBox.Visible = false;
             ProfileGroupBox.Height = ProfileTable.RowCount * _profileTableHeight + _profileGroupBoxPaddingHeight;
             ConfigurationGroupBox.Height = _configurationGroupBoxHeight;
         }

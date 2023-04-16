@@ -60,7 +60,6 @@
             configLayoutPanel = new TableLayoutPanel();
             ProfileLabel = new Label();
             ModeLabel = new Label();
-            ServerLabel = new Label();
             ProfileNameText = new TextBox();
             ModeComboBox = new ComboBox();
             ServerComboBox = new ComboBox();
@@ -72,6 +71,7 @@
             tableLayoutPanel3 = new TableLayoutPanel();
             EditModePictureBox = new PictureBox();
             DeleteModePictureBox = new PictureBox();
+            ServerLabel = new Label();
             StatusStrip = new StatusStrip();
             StatusLabel = new ToolStripStatusLabel();
             UsedBandwidthLabel = new ToolStripStatusLabel();
@@ -117,7 +117,7 @@
             MenuStrip.Location = new Point(0, 0);
             MenuStrip.Name = "MenuStrip";
             MenuStrip.RenderMode = ToolStripRenderMode.Professional;
-            MenuStrip.Size = new Size(928, 33);
+            MenuStrip.Size = new Size(971, 32);
             MenuStrip.TabIndex = 0;
             // 
             // ServerToolStripMenuItem
@@ -127,6 +127,7 @@
             ServerToolStripMenuItem.Name = "ServerToolStripMenuItem";
             ServerToolStripMenuItem.Size = new Size(79, 28);
             ServerToolStripMenuItem.Text = "Server";
+            ServerToolStripMenuItem.Visible = false;
             // 
             // ImportServersFromClipboardToolStripMenuItem
             // 
@@ -142,6 +143,7 @@
             ModeToolStripMenuItem.Name = "ModeToolStripMenuItem";
             ModeToolStripMenuItem.Size = new Size(77, 28);
             ModeToolStripMenuItem.Text = "Mode";
+            ModeToolStripMenuItem.Visible = false;
             // 
             // CreateProcessModeToolStripMenuItem
             // 
@@ -171,6 +173,7 @@
             SubscriptionToolStripMenuItem.Name = "SubscriptionToolStripMenuItem";
             SubscriptionToolStripMenuItem.Size = new Size(134, 28);
             SubscriptionToolStripMenuItem.Text = "Subscription";
+            SubscriptionToolStripMenuItem.Visible = false;
             // 
             // ManageSubscriptionsToolStripMenuItem
             // 
@@ -193,6 +196,7 @@
             OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem";
             OptionsToolStripMenuItem.Size = new Size(95, 28);
             OptionsToolStripMenuItem.Text = "Options";
+            OptionsToolStripMenuItem.Visible = false;
             // 
             // OpenDirectoryToolStripMenuItem
             // 
@@ -236,6 +240,7 @@
             HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
             HelpToolStripMenuItem.Size = new Size(67, 28);
             HelpToolStripMenuItem.Text = "Help";
+            HelpToolStripMenuItem.Visible = false;
             // 
             // CheckForUpdateToolStripMenuItem
             // 
@@ -254,7 +259,7 @@
             // ForceExitToolStripMenuItem
             // 
             ForceExitToolStripMenuItem.Name = "ForceExitToolStripMenuItem";
-            ForceExitToolStripMenuItem.Size = new Size(57, 29);
+            ForceExitToolStripMenuItem.Size = new Size(57, 28);
             ForceExitToolStripMenuItem.Text = "Exit";
             ForceExitToolStripMenuItem.Click += ForceExitToolStripMenuItem_Click;
             // 
@@ -266,6 +271,7 @@
             AboutToolStripButton.Name = "AboutToolStripButton";
             AboutToolStripButton.Size = new Size(68, 28);
             AboutToolStripButton.Text = "About";
+            AboutToolStripButton.Visible = false;
             AboutToolStripButton.Click += AboutToolStripButton_Click;
             // 
             // NewVersionLabel
@@ -292,13 +298,14 @@
             VersionLabel.Name = "VersionLabel";
             VersionLabel.Size = new Size(37, 24);
             VersionLabel.Text = "xxx";
+            VersionLabel.Visible = false;
             VersionLabel.Click += VersionLabel_Click;
             // 
             // accountToolStripMenuItem1
             // 
             accountToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, logoutToolStripMenuItem1, refreshToolStripMenuItem1 });
             accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            accountToolStripMenuItem1.Size = new Size(97, 29);
+            accountToolStripMenuItem1.Size = new Size(97, 28);
             accountToolStripMenuItem1.Text = "Account";
             // 
             // toolStripMenuItem2
@@ -323,9 +330,9 @@
             // ConfigurationGroupBox
             // 
             ConfigurationGroupBox.Controls.Add(configLayoutPanel);
-            ConfigurationGroupBox.Location = new Point(3, 3);
+            ConfigurationGroupBox.Location = new Point(12, 35);
             ConfigurationGroupBox.Name = "ConfigurationGroupBox";
-            ConfigurationGroupBox.Size = new Size(709, 115);
+            ConfigurationGroupBox.Size = new Size(761, 72);
             ConfigurationGroupBox.TabIndex = 1;
             ConfigurationGroupBox.TabStop = false;
             ConfigurationGroupBox.Text = "Configuration";
@@ -340,12 +347,12 @@
             configLayoutPanel.ColumnStyles.Add(new ColumnStyle());
             configLayoutPanel.Controls.Add(ProfileLabel, 0, 2);
             configLayoutPanel.Controls.Add(ModeLabel, 0, 1);
-            configLayoutPanel.Controls.Add(ServerLabel, 0, 0);
             configLayoutPanel.Controls.Add(ProfileNameText, 1, 2);
             configLayoutPanel.Controls.Add(ModeComboBox, 1, 1);
             configLayoutPanel.Controls.Add(ServerComboBox, 1, 0);
             configLayoutPanel.Controls.Add(tableLayoutPanel2, 2, 0);
             configLayoutPanel.Controls.Add(tableLayoutPanel3, 2, 1);
+            configLayoutPanel.Controls.Add(ServerLabel, 0, 0);
             configLayoutPanel.Dock = DockStyle.Fill;
             configLayoutPanel.Location = new Point(3, 27);
             configLayoutPanel.Name = "configLayoutPanel";
@@ -353,46 +360,39 @@
             configLayoutPanel.RowStyles.Add(new RowStyle());
             configLayoutPanel.RowStyles.Add(new RowStyle());
             configLayoutPanel.RowStyles.Add(new RowStyle());
-            configLayoutPanel.Size = new Size(703, 85);
+            configLayoutPanel.Size = new Size(755, 42);
             configLayoutPanel.TabIndex = 15;
             // 
             // ProfileLabel
             // 
             ProfileLabel.Anchor = AnchorStyles.Left;
             ProfileLabel.AutoSize = true;
-            ProfileLabel.Location = new Point(3, 80);
+            ProfileLabel.Location = new Point(3, 82);
             ProfileLabel.Name = "ProfileLabel";
             ProfileLabel.Size = new Size(65, 24);
             ProfileLabel.TabIndex = 10;
             ProfileLabel.Text = "Profile";
+            ProfileLabel.Visible = false;
             // 
             // ModeLabel
             // 
             ModeLabel.Anchor = AnchorStyles.Left;
             ModeLabel.AutoSize = true;
-            ModeLabel.Location = new Point(3, 43);
+            ModeLabel.Location = new Point(3, 45);
             ModeLabel.Name = "ModeLabel";
             ModeLabel.Size = new Size(61, 24);
             ModeLabel.TabIndex = 3;
             ModeLabel.Text = "Mode";
-            // 
-            // ServerLabel
-            // 
-            ServerLabel.Anchor = AnchorStyles.Left;
-            ServerLabel.AutoSize = true;
-            ServerLabel.Location = new Point(3, 6);
-            ServerLabel.Name = "ServerLabel";
-            ServerLabel.Size = new Size(63, 24);
-            ServerLabel.TabIndex = 0;
-            ServerLabel.Text = "Server";
+            ModeLabel.Visible = false;
             // 
             // ProfileNameText
             // 
             ProfileNameText.Dock = DockStyle.Fill;
-            ProfileNameText.Location = new Point(74, 77);
+            ProfileNameText.Location = new Point(74, 79);
             ProfileNameText.Name = "ProfileNameText";
             ProfileNameText.Size = new Size(546, 31);
             ProfileNameText.TabIndex = 11;
+            ProfileNameText.Visible = false;
             // 
             // ModeComboBox
             // 
@@ -401,10 +401,11 @@
             ModeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             ModeComboBox.FormattingEnabled = true;
             ModeComboBox.IntegralHeight = false;
-            ModeComboBox.Location = new Point(74, 40);
+            ModeComboBox.Location = new Point(74, 41);
             ModeComboBox.Name = "ModeComboBox";
             ModeComboBox.Size = new Size(546, 32);
             ModeComboBox.TabIndex = 2;
+            ModeComboBox.Visible = false;
             ModeComboBox.DrawItem += ComboBox_DrawItem;
             ModeComboBox.SelectionChangeCommitted += ModeComboBox_SelectionChangeCommitted;
             // 
@@ -445,6 +446,7 @@
             // 
             EditServerPictureBox.BackColor = SystemColors.Control;
             EditServerPictureBox.Cursor = Cursors.Hand;
+            EditServerPictureBox.Enabled = false;
             EditServerPictureBox.Image = Properties.Resources.edit;
             EditServerPictureBox.Location = new Point(3, 3);
             EditServerPictureBox.Name = "EditServerPictureBox";
@@ -452,6 +454,7 @@
             EditServerPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             EditServerPictureBox.TabIndex = 7;
             EditServerPictureBox.TabStop = false;
+            EditServerPictureBox.Visible = false;
             EditServerPictureBox.Click += EditServerPictureBox_Click;
             // 
             // CopyLinkPictureBox
@@ -464,11 +467,13 @@
             CopyLinkPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             CopyLinkPictureBox.TabIndex = 14;
             CopyLinkPictureBox.TabStop = false;
+            CopyLinkPictureBox.Visible = false;
             CopyLinkPictureBox.Click += CopyLinkPictureBox_Click;
             // 
             // DeleteServerPictureBox
             // 
             DeleteServerPictureBox.Cursor = Cursors.Hand;
+            DeleteServerPictureBox.Enabled = false;
             DeleteServerPictureBox.Image = Properties.Resources.delete;
             DeleteServerPictureBox.Location = new Point(26, 3);
             DeleteServerPictureBox.Name = "DeleteServerPictureBox";
@@ -476,6 +481,7 @@
             DeleteServerPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             DeleteServerPictureBox.TabIndex = 8;
             DeleteServerPictureBox.TabStop = false;
+            DeleteServerPictureBox.Visible = false;
             DeleteServerPictureBox.Click += DeleteServerPictureBox_Click;
             // 
             // SpeedPictureBox
@@ -499,12 +505,13 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel3.Controls.Add(EditModePictureBox, 0, 0);
             tableLayoutPanel3.Controls.Add(DeleteModePictureBox, 1, 0);
-            tableLayoutPanel3.Location = new Point(626, 40);
+            tableLayoutPanel3.Location = new Point(626, 41);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.Size = new Size(94, 24);
             tableLayoutPanel3.TabIndex = 13;
+            tableLayoutPanel3.Visible = false;
             // 
             // EditModePictureBox
             // 
@@ -516,6 +523,7 @@
             EditModePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             EditModePictureBox.TabIndex = 12;
             EditModePictureBox.TabStop = false;
+            EditModePictureBox.Visible = false;
             EditModePictureBox.Click += EditModePictureBox_Click;
             // 
             // DeleteModePictureBox
@@ -528,15 +536,26 @@
             DeleteModePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             DeleteModePictureBox.TabIndex = 13;
             DeleteModePictureBox.TabStop = false;
+            DeleteModePictureBox.Visible = false;
             DeleteModePictureBox.Click += DeleteModePictureBox_Click;
+            // 
+            // ServerLabel
+            // 
+            ServerLabel.Anchor = AnchorStyles.Left;
+            ServerLabel.AutoSize = true;
+            ServerLabel.Location = new Point(3, 7);
+            ServerLabel.Name = "ServerLabel";
+            ServerLabel.Size = new Size(63, 24);
+            ServerLabel.TabIndex = 0;
+            ServerLabel.Text = "Server";
             // 
             // StatusStrip
             // 
             StatusStrip.ImageScalingSize = new Size(20, 20);
             StatusStrip.Items.AddRange(new ToolStripItem[] { StatusLabel, UsedBandwidthLabel, DownloadSpeedLabel, UploadSpeedLabel, blankToolStripStatusLabel, HttpStatusLabel, NatTypeStatusLabel, NatTypeStatusLightLabel });
-            StatusStrip.Location = new Point(0, 348);
+            StatusStrip.Location = new Point(0, 138);
             StatusStrip.Name = "StatusStrip";
-            StatusStrip.Size = new Size(928, 31);
+            StatusStrip.Size = new Size(971, 31);
             StatusStrip.SizingGrip = false;
             StatusStrip.TabIndex = 2;
             // 
@@ -571,7 +590,7 @@
             // blankToolStripStatusLabel
             // 
             blankToolStripStatusLabel.Name = "blankToolStripStatusLabel";
-            blankToolStripStatusLabel.Size = new Size(578, 24);
+            blankToolStripStatusLabel.Size = new Size(621, 24);
             blankToolStripStatusLabel.Spring = true;
             // 
             // HttpStatusLabel
@@ -606,7 +625,7 @@
             // ControlButton
             // 
             ControlButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            ControlButton.Location = new Point(631, 3);
+            ControlButton.Location = new Point(775, 28);
             ControlButton.Name = "ControlButton";
             ControlButton.Size = new Size(75, 27);
             ControlButton.TabIndex = 3;
@@ -646,23 +665,26 @@
             // SettingsButton
             // 
             SettingsButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            SettingsButton.Location = new Point(1, 3);
+            SettingsButton.Location = new Point(856, 27);
             SettingsButton.Name = "SettingsButton";
             SettingsButton.Size = new Size(72, 27);
             SettingsButton.TabIndex = 4;
             SettingsButton.Text = "Settings";
             SettingsButton.UseVisualStyleBackColor = true;
+            SettingsButton.Visible = false;
             SettingsButton.Click += SettingsButton_Click;
             // 
             // ProfileGroupBox
             // 
             ProfileGroupBox.Controls.Add(ProfileTable);
-            ProfileGroupBox.Location = new Point(3, 124);
+            ProfileGroupBox.ForeColor = SystemColors.ControlText;
+            ProfileGroupBox.Location = new Point(3, 90);
             ProfileGroupBox.Name = "ProfileGroupBox";
-            ProfileGroupBox.Size = new Size(709, 65);
+            ProfileGroupBox.Size = new Size(755, 218);
             ProfileGroupBox.TabIndex = 13;
             ProfileGroupBox.TabStop = false;
             ProfileGroupBox.Text = "Profiles";
+            ProfileGroupBox.Visible = false;
             // 
             // ProfileTable
             // 
@@ -677,29 +699,29 @@
             ProfileTable.RowCount = 1;
             ProfileTable.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             ProfileTable.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            ProfileTable.Size = new Size(703, 35);
+            ProfileTable.Size = new Size(749, 188);
             ProfileTable.TabIndex = 0;
+            ProfileTable.Visible = false;
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoSize = true;
             flowLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            flowLayoutPanel1.Controls.Add(ConfigurationGroupBox);
-            flowLayoutPanel1.Controls.Add(ProfileGroupBox);
             flowLayoutPanel1.Controls.Add(ButtomControlContainerControl);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(12, 29);
+            flowLayoutPanel1.Location = new Point(12, 35);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(715, 256);
+            flowLayoutPanel1.Size = new Size(950, 331);
             flowLayoutPanel1.TabIndex = 14;
             // 
             // ButtomControlContainerControl
             // 
-            ButtomControlContainerControl.Controls.Add(ControlButton);
             ButtomControlContainerControl.Controls.Add(SettingsButton);
-            ButtomControlContainerControl.Location = new Point(3, 195);
+            ButtomControlContainerControl.Controls.Add(ControlButton);
+            ButtomControlContainerControl.Controls.Add(ProfileGroupBox);
+            ButtomControlContainerControl.Location = new Point(3, 3);
             ButtomControlContainerControl.Name = "ButtomControlContainerControl";
-            ButtomControlContainerControl.Size = new Size(706, 58);
+            ButtomControlContainerControl.Size = new Size(944, 325);
             ButtomControlContainerControl.TabIndex = 14;
             ButtomControlContainerControl.TabStop = false;
             ButtomControlContainerControl.Text = "groupBox1";
@@ -710,7 +732,8 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(928, 379);
+            ClientSize = new Size(971, 169);
+            Controls.Add(ConfigurationGroupBox);
             Controls.Add(MenuStrip);
             Controls.Add(StatusStrip);
             Controls.Add(flowLayoutPanel1);
