@@ -59,6 +59,12 @@ public static class Program
             if (!Directory.Exists(item))
                 Directory.CreateDirectory(item);
 
+        // 先清除data目录下所有文件,在登录之后再写入
+        var dataDirectory = new DirectoryInfo("data");
+        foreach (var file in dataDirectory.GetFiles())
+            file.Delete();
+
+
         // load configuration
         Configuration.LoadAsync().Wait();
 

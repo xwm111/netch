@@ -117,7 +117,7 @@
             MenuStrip.Location = new Point(0, 0);
             MenuStrip.Name = "MenuStrip";
             MenuStrip.RenderMode = ToolStripRenderMode.Professional;
-            MenuStrip.Size = new Size(971, 32);
+            MenuStrip.Size = new Size(1055, 32);
             MenuStrip.TabIndex = 0;
             // 
             // ServerToolStripMenuItem
@@ -553,9 +553,9 @@
             // 
             StatusStrip.ImageScalingSize = new Size(20, 20);
             StatusStrip.Items.AddRange(new ToolStripItem[] { StatusLabel, UsedBandwidthLabel, DownloadSpeedLabel, UploadSpeedLabel, blankToolStripStatusLabel, HttpStatusLabel, NatTypeStatusLabel, NatTypeStatusLightLabel });
-            StatusStrip.Location = new Point(0, 138);
+            StatusStrip.Location = new Point(0, 349);
             StatusStrip.Name = "StatusStrip";
-            StatusStrip.Size = new Size(971, 31);
+            StatusStrip.Size = new Size(1055, 31);
             StatusStrip.SizingGrip = false;
             StatusStrip.TabIndex = 2;
             // 
@@ -590,7 +590,7 @@
             // blankToolStripStatusLabel
             // 
             blankToolStripStatusLabel.Name = "blankToolStripStatusLabel";
-            blankToolStripStatusLabel.Size = new Size(621, 24);
+            blankToolStripStatusLabel.Size = new Size(705, 24);
             blankToolStripStatusLabel.Spring = true;
             // 
             // HttpStatusLabel
@@ -732,7 +732,7 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(971, 169);
+            ClientSize = new Size(1055, 380);
             Controls.Add(ConfigurationGroupBox);
             Controls.Add(MenuStrip);
             Controls.Add(StatusStrip);
