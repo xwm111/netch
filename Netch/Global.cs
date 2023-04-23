@@ -10,6 +10,15 @@ namespace Netch;
 
 public static class Global
 {
+    //用于存储用户是否登录
+    public static bool IsLogin;
+
+    //当前用户登录名
+    public static string current_UserName;
+
+
+
+
     /// <summary>
     ///     主窗体的静态实例
     /// </summary>

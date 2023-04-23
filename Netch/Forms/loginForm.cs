@@ -40,6 +40,7 @@ public partial class loginForm : Form
             var servers = result["Servers"];
             Configuration.UpdateServerList(servers).Wait();
             await Configuration.SaveAsync();
+            Global.IsLogin = true;
             Close();
         }
         else

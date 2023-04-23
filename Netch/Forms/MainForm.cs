@@ -27,6 +27,8 @@ public partial class MainForm : Form
 
     private bool _textRecorded;
 
+    private bool isLogIn;
+
     public MainForm()
     {
         InitializeComponent();
@@ -1499,7 +1501,29 @@ public partial class MainForm : Form
         Hide();
         //new AboutForm().ShowDialog();
         new loginForm().ShowDialog();
+        if (Global.IsLogin)
+        {
+            toolStripMenuItem2.Enabled = false;
+            logoutToolStripMenuItem1.Enabled = true;
+            refreshToolStripMenuItem1.Enabled = true;
+        }
         LoadServers();
         Show();
+    }
+
+    private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
+    {
+        //登出 先清除data目录下所有文件,
+        var dataDirectory = new DirectoryInfo("data");
+        foreach (var file in dataDirectory.GetFiles())
+            file.Delete();
+        Global.Settings.Server = new();
+        LoadServers();
+        //设置登录状态为FALSE
+        Global.IsLogin = false;
+        toolStripMenuItem2.Enabled = true;
+        logoutToolStripMenuItem1.Enabled = false;
+        refreshToolStripMenuItem1.Enabled = false;
+        MessageBox.Show("账号已登出");
     }
 }

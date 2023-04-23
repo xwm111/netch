@@ -117,7 +117,7 @@
             MenuStrip.Location = new Point(0, 0);
             MenuStrip.Name = "MenuStrip";
             MenuStrip.RenderMode = ToolStripRenderMode.Professional;
-            MenuStrip.Size = new Size(1055, 32);
+            MenuStrip.Size = new Size(1055, 33);
             MenuStrip.TabIndex = 0;
             // 
             // ServerToolStripMenuItem
@@ -259,7 +259,7 @@
             // ForceExitToolStripMenuItem
             // 
             ForceExitToolStripMenuItem.Name = "ForceExitToolStripMenuItem";
-            ForceExitToolStripMenuItem.Size = new Size(57, 28);
+            ForceExitToolStripMenuItem.Size = new Size(57, 29);
             ForceExitToolStripMenuItem.Text = "Exit";
             ForceExitToolStripMenuItem.Click += ForceExitToolStripMenuItem_Click;
             // 
@@ -305,26 +305,29 @@
             // 
             accountToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, logoutToolStripMenuItem1, refreshToolStripMenuItem1 });
             accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            accountToolStripMenuItem1.Size = new Size(97, 28);
+            accountToolStripMenuItem1.Size = new Size(97, 29);
             accountToolStripMenuItem1.Text = "Account";
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(169, 34);
+            toolStripMenuItem2.Size = new Size(270, 34);
             toolStripMenuItem2.Text = "login";
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // logoutToolStripMenuItem1
             // 
+            logoutToolStripMenuItem1.Enabled = false;
             logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            logoutToolStripMenuItem1.Size = new Size(169, 34);
+            logoutToolStripMenuItem1.Size = new Size(270, 34);
             logoutToolStripMenuItem1.Text = "logout";
+            logoutToolStripMenuItem1.Click += logoutToolStripMenuItem1_Click;
             // 
             // refreshToolStripMenuItem1
             // 
+            refreshToolStripMenuItem1.Enabled = false;
             refreshToolStripMenuItem1.Name = "refreshToolStripMenuItem1";
-            refreshToolStripMenuItem1.Size = new Size(169, 34);
+            refreshToolStripMenuItem1.Size = new Size(270, 34);
             refreshToolStripMenuItem1.Text = "refresh";
             // 
             // ConfigurationGroupBox
