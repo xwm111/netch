@@ -11,7 +11,7 @@
     <ApplicationManifest>App.manifest</ApplicationManifest>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-    <ApplicationIcon>Resources\Netch.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\3bet.ico</ApplicationIcon>
     <IsPackable>false</IsPackable>
     <!-- event handler async void Warning -->
     <NoWarn>VSTHRD100</NoWarn>
@@ -20,6 +20,7 @@
     <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <TargetFramework>net6.0-windows</TargetFramework>
+    <AssemblyName>3bet-gg-加速器</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -89,6 +90,7 @@
 
   <ItemGroup>
     <None Remove="NativeMethods.txt" />
+    <Content Include="Resources\3bet.ico" />
     <None Update="NOTICE.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

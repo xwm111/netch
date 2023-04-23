@@ -32,7 +32,7 @@ public partial class MainForm : Form
     public MainForm()
     {
         InitializeComponent();
-        NotifyIcon.Icon = Icon = Resources.icon;
+        NotifyIcon.Icon = Icon = Resources._3bet;
 
         AddAddServerToolStripMenuItems();
 

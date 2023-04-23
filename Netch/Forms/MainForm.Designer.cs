@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             MenuStrip = new MenuStrip();
             ServerToolStripMenuItem = new ToolStripMenuItem();
             ImportServersFromClipboardToolStripMenuItem = new ToolStripMenuItem();
@@ -117,7 +118,7 @@
             MenuStrip.Location = new Point(0, 0);
             MenuStrip.Name = "MenuStrip";
             MenuStrip.RenderMode = ToolStripRenderMode.Professional;
-            MenuStrip.Size = new Size(1055, 33);
+            MenuStrip.Size = new Size(1364, 32);
             MenuStrip.TabIndex = 0;
             // 
             // ServerToolStripMenuItem
@@ -259,7 +260,7 @@
             // ForceExitToolStripMenuItem
             // 
             ForceExitToolStripMenuItem.Name = "ForceExitToolStripMenuItem";
-            ForceExitToolStripMenuItem.Size = new Size(57, 29);
+            ForceExitToolStripMenuItem.Size = new Size(57, 28);
             ForceExitToolStripMenuItem.Text = "Exit";
             ForceExitToolStripMenuItem.Click += ForceExitToolStripMenuItem_Click;
             // 
@@ -305,30 +306,30 @@
             // 
             accountToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, logoutToolStripMenuItem1, refreshToolStripMenuItem1 });
             accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            accountToolStripMenuItem1.Size = new Size(97, 29);
-            accountToolStripMenuItem1.Text = "Account";
+            accountToolStripMenuItem1.Size = new Size(62, 28);
+            accountToolStripMenuItem1.Text = "账号";
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(270, 34);
-            toolStripMenuItem2.Text = "login";
+            toolStripMenuItem2.Size = new Size(146, 34);
+            toolStripMenuItem2.Text = "登录";
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // logoutToolStripMenuItem1
             // 
             logoutToolStripMenuItem1.Enabled = false;
             logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            logoutToolStripMenuItem1.Size = new Size(270, 34);
-            logoutToolStripMenuItem1.Text = "logout";
+            logoutToolStripMenuItem1.Size = new Size(146, 34);
+            logoutToolStripMenuItem1.Text = "登出";
             logoutToolStripMenuItem1.Click += logoutToolStripMenuItem1_Click;
             // 
             // refreshToolStripMenuItem1
             // 
             refreshToolStripMenuItem1.Enabled = false;
             refreshToolStripMenuItem1.Name = "refreshToolStripMenuItem1";
-            refreshToolStripMenuItem1.Size = new Size(270, 34);
-            refreshToolStripMenuItem1.Text = "refresh";
+            refreshToolStripMenuItem1.Size = new Size(146, 34);
+            refreshToolStripMenuItem1.Text = "更新";
             // 
             // ConfigurationGroupBox
             // 
@@ -556,9 +557,9 @@
             // 
             StatusStrip.ImageScalingSize = new Size(20, 20);
             StatusStrip.Items.AddRange(new ToolStripItem[] { StatusLabel, UsedBandwidthLabel, DownloadSpeedLabel, UploadSpeedLabel, blankToolStripStatusLabel, HttpStatusLabel, NatTypeStatusLabel, NatTypeStatusLightLabel });
-            StatusStrip.Location = new Point(0, 349);
+            StatusStrip.Location = new Point(0, 494);
             StatusStrip.Name = "StatusStrip";
-            StatusStrip.Size = new Size(1055, 31);
+            StatusStrip.Size = new Size(1364, 31);
             StatusStrip.SizingGrip = false;
             StatusStrip.TabIndex = 2;
             // 
@@ -593,7 +594,7 @@
             // blankToolStripStatusLabel
             // 
             blankToolStripStatusLabel.Name = "blankToolStripStatusLabel";
-            blankToolStripStatusLabel.Size = new Size(705, 24);
+            blankToolStripStatusLabel.Size = new Size(1014, 24);
             blankToolStripStatusLabel.Spring = true;
             // 
             // HttpStatusLabel
@@ -735,18 +736,19 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(1055, 380);
+            ClientSize = new Size(1364, 525);
             Controls.Add(ConfigurationGroupBox);
             Controls.Add(MenuStrip);
             Controls.Add(StatusStrip);
             Controls.Add(flowLayoutPanel1);
             Font = new Font("微软雅黑", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Netch";
+            Text = "3bet-gg-游戏加速器";
             FormClosing += MainForm_FormClosing;
             Load += MainForm_Load;
             MenuStrip.ResumeLayout(false);

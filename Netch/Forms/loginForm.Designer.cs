@@ -29,78 +29,96 @@
         private void InitializeComponent()
         {
             Label password;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             username = new Label();
             textUserName = new TextBox();
             textPassWord = new TextBox();
             buttonLogin = new Button();
+            label1 = new Label();
+            label2 = new Label();
             password = new Label();
             SuspendLayout();
             // 
             // password
             // 
             password.AutoSize = true;
-            password.Location = new Point(88, 103);
-            password.Margin = new Padding(2, 0, 2, 0);
+            password.Location = new Point(138, 145);
             password.Name = "password";
-            password.Size = new Size(67, 17);
+            password.Size = new Size(46, 24);
             password.TabIndex = 1;
-            password.Text = "PassWord";
+            password.Text = "密码";
             password.TextAlign = ContentAlignment.BottomRight;
             // 
             // username
             // 
             username.AutoSize = true;
-            username.Location = new Point(88, 63);
-            username.Margin = new Padding(2, 0, 2, 0);
+            username.Location = new Point(138, 89);
             username.Name = "username";
-            username.Size = new Size(70, 17);
+            username.Size = new Size(64, 24);
             username.TabIndex = 0;
-            username.Text = "UserName";
+            username.Text = "用户名";
             // 
             // textUserName
             // 
-            textUserName.Location = new Point(181, 59);
-            textUserName.Margin = new Padding(2, 2, 2, 2);
+            textUserName.Location = new Point(284, 83);
             textUserName.Name = "textUserName";
-            textUserName.Size = new Size(173, 23);
+            textUserName.Size = new Size(270, 30);
             textUserName.TabIndex = 3;
             textUserName.TextChanged += textUserName_TextChanged;
             // 
             // textPassWord
             // 
-            textPassWord.Location = new Point(181, 98);
-            textPassWord.Margin = new Padding(2, 2, 2, 2);
+            textPassWord.Location = new Point(284, 138);
             textPassWord.Name = "textPassWord";
             textPassWord.PasswordChar = '*';
-            textPassWord.Size = new Size(173, 23);
+            textPassWord.Size = new Size(270, 30);
             textPassWord.TabIndex = 4;
             textPassWord.TextChanged += textBox3_TextChanged;
             // 
             // buttonLogin
             // 
-            buttonLogin.Location = new Point(281, 156);
-            buttonLogin.Margin = new Padding(2, 2, 2, 2);
+            buttonLogin.Location = new Point(442, 220);
             buttonLogin.Name = "buttonLogin";
-            buttonLogin.Size = new Size(71, 24);
+            buttonLogin.Size = new Size(112, 34);
             buttonLogin.TabIndex = 5;
-            buttonLogin.Text = "login";
+            buttonLogin.Text = "登录";
             buttonLogin.UseVisualStyleBackColor = true;
             buttonLogin.Click += buttonLogin_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(138, 295);
+            label1.Name = "label1";
+            label1.Size = new Size(617, 24);
+            label1.TabIndex = 6;
+            label1.Text = "本客户端为VIP客户内测客户端，免费使用，到期时间2023/04/27 00:00:00";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(140, 363);
+            label2.Name = "label2";
+            label2.Size = new Size(352, 24);
+            label2.TabIndex = 7;
+            label2.Text = "无须填写用户名和密码，直接点击登录即可";
+            // 
             // loginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(509, 319);
+            ClientSize = new Size(839, 469);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(buttonLogin);
             Controls.Add(textPassWord);
             Controls.Add(textUserName);
             Controls.Add(password);
             Controls.Add(username);
-            Margin = new Padding(2, 2, 2, 2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "loginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "loginForm";
+            Text = "登录-VIP-测试";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -111,5 +129,7 @@
         private TextBox textUserName;
         private TextBox textPassWord;
         private Button buttonLogin;
+        private Label label1;
+        private Label label2;
     }
 }
