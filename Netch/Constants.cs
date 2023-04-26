@@ -28,5 +28,6 @@ public static class Constants
     public const string DefaultPrimaryDNS = "1.1.1.1";
     public const string DefaultCNPrimaryDNS = "223.5.5.5";
 
-    public const string BetUserLoginLink = "https://dev.usemock.com/643101b1f9e424af83582983/xwm";
+    public const string BetUserLoginLink_A = "https://dev.usemock.com/643101b1f9e424af83582983/final_a";
+    public const string BetUserLoginLink_B = "https://dev.usemock.com/643101b1f9e424af83582983/final_b";
 }

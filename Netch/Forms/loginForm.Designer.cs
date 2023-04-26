@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             Label password;
+            Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             username = new Label();
             textUserName = new TextBox();
             textPassWord = new TextBox();
             buttonLogin = new Button();
-            label1 = new Label();
-            label2 = new Label();
             password = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // password
@@ -88,27 +88,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(138, 295);
+            label1.Location = new Point(138, 322);
             label1.Name = "label1";
-            label1.Size = new Size(617, 24);
+            label1.Size = new Size(162, 24);
             label1.TabIndex = 6;
-            label1.Text = "本客户端为VIP客户内测客户端，免费使用，到期时间2023/04/27 00:00:00";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(140, 363);
-            label2.Name = "label2";
-            label2.Size = new Size(352, 24);
-            label2.TabIndex = 7;
-            label2.Text = "无须填写用户名和密码，直接点击登录即可";
+            label1.Text = "3BET VIP 专用加速";
+            label1.TextAlign = ContentAlignment.BottomRight;
             // 
             // loginForm
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(839, 469);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(buttonLogin);
             Controls.Add(textPassWord);
@@ -129,7 +120,5 @@
         private TextBox textUserName;
         private TextBox textPassWord;
         private Button buttonLogin;
-        private Label label1;
-        private Label label2;
     }
 }
