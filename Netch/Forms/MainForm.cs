@@ -1526,4 +1526,18 @@ public partial class MainForm : Form
         refreshToolStripMenuItem1.Enabled = false;
         MessageBox.Show("账号已登出");
     }
+
+    private void configLayoutPanel_Paint(object sender, PaintEventArgs e)
+    {
+
+    }
+
+    private void ButtomControlContainerControl_Click(object sender, EventArgs e)
+    {
+    }
+
+    private void label2_Click(object sender, EventArgs e)
+    {
+
+    }
 }
