@@ -1,6 +1,8 @@
 ﻿using Netch.Properties;
 using Netch.Utils;
 using Newtonsoft.Json.Linq;
+using System.Net.Http;
+
 namespace Netch.Forms;
 [Fody.ConfigureAwait(true)]
 public partial class loginForm : Form
@@ -25,6 +27,7 @@ public partial class loginForm : Form
     {
         var url = Constants.BetUserLoginLink;
         var client = new HttpClient();
+        client.DefaultRequestHeaders.Add("User-Agent", "windows-pc");
         List<KeyValuePair<string, string>> formData = new List<KeyValuePair<string, string>>
             {
                 new KeyValuePair<string, string>("name", textUserName.Text),
@@ -38,26 +41,35 @@ public partial class loginForm : Form
         //var client = new HttpClient();
         //var response = await client.GetAsync($"{url}?username={textUserName}&password={textPassWord}");
         //var content = await response.Content.ReadAsStringAsync();
-
-        var result = JObject.Parse(content);
-        var loginValue = (bool)result["login"];
-        if (loginValue)
+        try
         {
+            var result = JObject.Parse(content);
+            var loginValue = (bool)result["login"];
+            if (loginValue)
+            {
 
-            //处理返回的json数据 存入 data和mode目录下，  data存放服务器信息，mode存放加速的游戏进程名
-            //this.returnform.vmessText = (String)result["vmess"];
-            //this.returnform._isLogin = true;
-            MessageBox.Show("登录成功");
-            var servers = result["Servers"];
-            Configuration.UpdateServerList(servers).Wait();
-            await Configuration.SaveAsync();
-            Global.IsLogin = true;
-            Close();
+                //处理返回的json数据 存入 data和mode目录下，  data存放服务器信息，mode存放加速的游戏进程名
+                //this.returnform.vmessText = (String)result["vmess"];
+                //this.returnform._isLogin = true;
+                MessageBox.Show("登录成功");
+                var servers = result["Servers"];
+                Configuration.UpdateServerList(servers).Wait();
+                await Configuration.SaveAsync();
+                Global.IsLogin = true;
+                Global.Settings.userName = textUserName.Text;
+                Global.Settings.password = textPassWord.Text;
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("登录失败");
+            }
         }
-        else
+        catch (Exception ex)
         {
             MessageBox.Show("登录失败");
         }
+       
     }
 }
 
