@@ -25,8 +25,19 @@ public partial class loginForm : Form
     {
         var url = Constants.BetUserLoginLink;
         var client = new HttpClient();
-        var response = await client.GetAsync($"{url}?username={textUserName}&password={textPassWord}");
+        List<KeyValuePair<string, string>> formData = new List<KeyValuePair<string, string>>
+            {
+                new KeyValuePair<string, string>("name", textUserName.Text),
+                new KeyValuePair<string, string>("password", textPassWord.Text)
+            };
+        var postData = new FormUrlEncodedContent(formData);
+        var response = await client.PostAsync(url, postData);
         var content = await response.Content.ReadAsStringAsync();
+
+        //var url = Constants.BetUserLoginLink;
+        //var client = new HttpClient();
+        //var response = await client.GetAsync($"{url}?username={textUserName}&password={textPassWord}");
+        //var content = await response.Content.ReadAsStringAsync();
 
         var result = JObject.Parse(content);
         var loginValue = (bool)result["login"];
