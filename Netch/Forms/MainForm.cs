@@ -47,6 +47,9 @@ public partial class MainForm : Form
 
         // 监听电源事件
         SystemEvents.PowerModeChanged += SystemEvents_PowerModeChanged;
+
+        Global.Settings.Server = new();
+        LoadServers();
     }
 
     private void AddAddServerToolStripMenuItems()

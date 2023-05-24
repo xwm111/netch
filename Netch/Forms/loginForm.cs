@@ -53,15 +53,19 @@ public partial class loginForm : Form
                 //this.returnform._isLogin = true;
                 MessageBox.Show("登录成功");
                 var servers = result["Servers"];
-                Configuration.UpdateServerList(servers).Wait();
-                await Configuration.SaveAsync();
                 Global.IsLogin = true;
                 Global.Settings.userName = textUserName.Text;
                 Global.Settings.password = textPassWord.Text;
+                await Configuration.SaveAsync();
+                Configuration.UpdateServerList(servers).Wait();
+                await Configuration.SaveAsync();
                 Close();
             }
             else
             {
+                Global.Settings.userName = "";
+                Global.Settings.password = "";
+                await Configuration.SaveAsync();
                 MessageBox.Show("登录失败");
             }
         }
@@ -69,7 +73,7 @@ public partial class loginForm : Form
         {
             MessageBox.Show("登录失败");
         }
-       
+
     }
 }
 

@@ -309,30 +309,30 @@
             // 
             accountToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, logoutToolStripMenuItem1, refreshToolStripMenuItem1 });
             accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            accountToolStripMenuItem1.Size = new Size(66, 21);
-            accountToolStripMenuItem1.Text = "Account";
+            accountToolStripMenuItem1.Size = new Size(44, 21);
+            accountToolStripMenuItem1.Text = "账号";
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(117, 22);
-            toolStripMenuItem2.Text = "login";
+            toolStripMenuItem2.Size = new Size(100, 22);
+            toolStripMenuItem2.Text = "登入";
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // logoutToolStripMenuItem1
             // 
             logoutToolStripMenuItem1.Enabled = false;
             logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            logoutToolStripMenuItem1.Size = new Size(117, 22);
-            logoutToolStripMenuItem1.Text = "logout";
+            logoutToolStripMenuItem1.Size = new Size(100, 22);
+            logoutToolStripMenuItem1.Text = "登出";
             logoutToolStripMenuItem1.Click += logoutToolStripMenuItem1_Click;
             // 
             // refreshToolStripMenuItem1
             // 
             refreshToolStripMenuItem1.Enabled = false;
             refreshToolStripMenuItem1.Name = "refreshToolStripMenuItem1";
-            refreshToolStripMenuItem1.Size = new Size(117, 22);
-            refreshToolStripMenuItem1.Text = "refresh";
+            refreshToolStripMenuItem1.Size = new Size(100, 22);
+            refreshToolStripMenuItem1.Text = "更新";
             // 
             // ConfigurationGroupBox
             // 

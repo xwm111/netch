@@ -58,11 +58,13 @@ public static class Program
         foreach (var item in directories)
             if (!Directory.Exists(item))
                 Directory.CreateDirectory(item);
-
         // 先清除data目录下所有文件,在登录之后再写入
         var dataDirectory = new DirectoryInfo("data");
+
+        Global.Settings.Server = new();
+
         foreach (var file in dataDirectory.GetFiles())
-            file.Delete();
+            //file.Delete();
 
 
         // load configuration

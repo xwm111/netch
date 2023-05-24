@@ -42,9 +42,9 @@
             password.Location = new Point(88, 103);
             password.Margin = new Padding(2, 0, 2, 0);
             password.Name = "password";
-            password.Size = new Size(67, 17);
+            password.Size = new Size(32, 17);
             password.TabIndex = 1;
-            password.Text = "PassWord";
+            password.Text = "密码";
             password.TextAlign = ContentAlignment.BottomRight;
             // 
             // username
@@ -53,9 +53,9 @@
             username.Location = new Point(88, 63);
             username.Margin = new Padding(2, 0, 2, 0);
             username.Name = "username";
-            username.Size = new Size(70, 17);
+            username.Size = new Size(32, 17);
             username.TabIndex = 0;
-            username.Text = "UserName";
+            username.Text = "账号";
             // 
             // textUserName
             // 
@@ -65,6 +65,7 @@
             textUserName.Size = new Size(173, 23);
             textUserName.TabIndex = 3;
             textUserName.TextChanged += textUserName_TextChanged;
+            textUserName.Text = Global.Settings.userName;
             // 
             // textPassWord
             // 
@@ -75,6 +76,7 @@
             textPassWord.Size = new Size(173, 23);
             textPassWord.TabIndex = 4;
             textPassWord.TextChanged += textBox3_TextChanged;
+            textPassWord.Text = Global.Settings.password;
             // 
             // buttonLogin
             // 
@@ -83,7 +85,7 @@
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(71, 24);
             buttonLogin.TabIndex = 5;
-            buttonLogin.Text = "login";
+            buttonLogin.Text = "登录";
             buttonLogin.UseVisualStyleBackColor = true;
             buttonLogin.Click += buttonLogin_Click;
             // 
@@ -100,7 +102,7 @@
             Margin = new Padding(2);
             Name = "loginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "loginForm";
+            Text = "登录";
             ResumeLayout(false);
             PerformLayout();
         }
