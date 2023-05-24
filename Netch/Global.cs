@@ -19,6 +19,7 @@ public static class Global
 
 
 
+
     /// <summary>
     ///     主窗体的静态实例
     /// </summary>

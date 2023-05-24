@@ -60,7 +60,7 @@
             // textUserName
             // 
             textUserName.Location = new Point(181, 59);
-            textUserName.Margin = new Padding(2, 2, 2, 2);
+            textUserName.Margin = new Padding(2);
             textUserName.Name = "textUserName";
             textUserName.Size = new Size(173, 23);
             textUserName.TabIndex = 3;
@@ -69,7 +69,7 @@
             // textPassWord
             // 
             textPassWord.Location = new Point(181, 98);
-            textPassWord.Margin = new Padding(2, 2, 2, 2);
+            textPassWord.Margin = new Padding(2);
             textPassWord.Name = "textPassWord";
             textPassWord.PasswordChar = '*';
             textPassWord.Size = new Size(173, 23);
@@ -79,7 +79,7 @@
             // buttonLogin
             // 
             buttonLogin.Location = new Point(281, 156);
-            buttonLogin.Margin = new Padding(2, 2, 2, 2);
+            buttonLogin.Margin = new Padding(2);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(71, 24);
             buttonLogin.TabIndex = 5;
@@ -97,7 +97,7 @@
             Controls.Add(textUserName);
             Controls.Add(password);
             Controls.Add(username);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "loginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "loginForm";

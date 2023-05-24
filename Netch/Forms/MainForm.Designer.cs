@@ -780,7 +780,7 @@
             MaximizeBox = false;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Netch";
+            Text = "GG稳定器";
             FormClosing += MainForm_FormClosing;
             Load += MainForm_Load;
             MenuStrip.ResumeLayout(false);

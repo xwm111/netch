@@ -169,4 +169,8 @@ public class Setting
         foreach (var p in typeof(Setting).GetProperties())
             p.SetValue(this, p.GetValue(value));
     }
+
+    public String userName { get; set; } = "";
+    public String password { get; set; } = ""; 
+
 }
